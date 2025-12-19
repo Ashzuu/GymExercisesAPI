@@ -1,4 +1,4 @@
-package gymexercises.api.interfaces;
+package gymexercises.api.repositories;
 
 import gymexercises.api.models.Exercise;
 import io.quarkus.hibernate.orm.panache.PanacheRepositoryBase;

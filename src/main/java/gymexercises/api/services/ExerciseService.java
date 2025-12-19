@@ -1,6 +1,6 @@
 package gymexercises.api.services;
 
-import gymexercises.api.interfaces.ExerciseRepository;
+import gymexercises.api.repositories.ExerciseRepository;
 import gymexercises.api.models.Exercise;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
