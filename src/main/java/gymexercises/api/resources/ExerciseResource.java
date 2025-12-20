@@ -24,10 +24,10 @@ public class ExerciseResource {
         return this.service.getAll();
     }
 
-    @Path("/getBy/muscularGroup/{muscular_group_id}")
+    @Path("/getBy/muscularGroup/{muscular_group}")
     @GET
     @Produces("application/json")
-    public Exercise[] getByMuscularGroup(@PathParam("muscular_group_id") String muscular_group){
+    public Exercise[] getByMuscularGroup(@PathParam("muscular_group") String muscular_group){
         return this.service.getByMuscularGroup(muscular_group);
     }
 }

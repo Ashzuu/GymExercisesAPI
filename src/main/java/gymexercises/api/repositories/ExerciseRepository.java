@@ -14,7 +14,7 @@ public class ExerciseRepository implements PanacheRepositoryBase<Exercise, Integ
                         "JOIN m.muscularGroup mG " +
                         "WHERE mG.nameFr = ?1 OR mG.nameEn = ?1";
         return list(
-            query,muscularGroup
+            query,muscularGroup.toUpperCase()
         );
     }
 }
