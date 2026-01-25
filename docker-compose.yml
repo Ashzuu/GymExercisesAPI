@@ -10,9 +10,7 @@ services:
     ports:
       - "${DB_PORT}:5432"
     volumes:
-      # Persistance des données (pour ne pas perdre la DB au redémarrage)
       - postgres_data:/var/lib/postgresql/data
-      # Script d'initialisation (exécuté uniquement au premier lancement)
       - ./db-init:/docker-entrypoint-initdb.d
     networks:
       - gym-network
@@ -23,21 +21,17 @@ services:
       timeout: 5s
       retries: 5
 
-  # --- Service API Quarkus ---
   api:
     build: .
     container_name: GymExercisesAPI
     ports:
       - "8080:8080"
     environment:
-      # Configuration Quarkus dynamique
       QUARKUS_DATASOURCE_DB_KIND: postgresql
       QUARKUS_DATASOURCE_JDBC_URL: jdbc:postgresql://postgres:${DB_PORT}/${DB_NAME}
       QUARKUS_DATASOURCE_USERNAME: ${DB_USER}
       QUARKUS_DATASOURCE_PASSWORD: ${DB_PASSWORD}
-      # Hibernate valide juste le schéma (car tu as ton script SQL d'init)
       QUARKUS_HIBERNATE_ORM_DATABASE_GENERATION: validate
-      # Log SQL pour le debug (optionnel, à retirer en prod)
       QUARKUS_HIBERNATE_ORM_LOG_SQL: "true"
     depends_on:
       postgres:

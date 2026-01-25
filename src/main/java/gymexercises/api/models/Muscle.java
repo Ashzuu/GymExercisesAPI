@@ -1,9 +1,13 @@
 package gymexercises.api.models;
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "muscles", schema = "data")
+@Getter
+@Setter
 public class Muscle extends PanacheEntityBase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,52 +29,4 @@ public class Muscle extends PanacheEntityBase {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "muscular_group_id", nullable = false)
     private MuscularGroup muscularGroup;
-
-    public MuscularGroup getMuscularGroup() {
-        return muscularGroup;
-    }
-
-    public void setMuscularGroup(MuscularGroup muscularGroup) {
-        this.muscularGroup = muscularGroup;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getMedia() {
-        return media;
-    }
-
-    public void setMedia(String media) {
-        this.media = media;
-    }
-
-    public String getNameEn() {
-        return nameEn;
-    }
-
-    public void setNameEn(String nameEn) {
-        this.nameEn = nameEn;
-    }
-
-    public String getNameFr() {
-        return nameFr;
-    }
-
-    public void setNameFr(String nameFr) {
-        this.nameFr = nameFr;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 }
