@@ -1,4 +1,4 @@
-package gymexercises.api.interfaces;
+package gymexercises.api.repositories;
 
 import gymexercises.api.models.Exercise;
 import io.quarkus.hibernate.orm.panache.PanacheRepositoryBase;
@@ -14,7 +14,7 @@ public class ExerciseRepository implements PanacheRepositoryBase<Exercise, Integ
                         "JOIN m.muscularGroup mG " +
                         "WHERE mG.nameFr = ?1 OR mG.nameEn = ?1";
         return list(
-            query,muscularGroup
+            query,muscularGroup.toUpperCase()
         );
     }
 }

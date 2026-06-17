@@ -2,12 +2,16 @@ package gymexercises.api.models;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "exercises", schema = "data")
+@Getter
+@Setter
 public class Exercise extends PanacheEntityBase {
 
     @Id
@@ -32,36 +36,4 @@ public class Exercise extends PanacheEntityBase {
             inverseJoinColumns = @JoinColumn(name = "id_muscle", table = "muscles")
     )
     public Set<Muscle> muscles = new HashSet<>();
-
-    public String getMedia() {
-        return media;
-    }
-
-    public void setMedia(String media) {
-        this.media = media;
-    }
-
-    public String getNameEn() {
-        return nameEn;
-    }
-
-    public void setNameEn(String nameEn) {
-        this.nameEn = nameEn;
-    }
-
-    public String getNameFr() {
-        return nameFr;
-    }
-
-    public void setNameFr(String nameFr) {
-        this.nameFr = nameFr;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 }
