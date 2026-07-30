@@ -1,5 +1,8 @@
 # 🏋️‍♂️ GymExercisesAPI
 
+- [English documentation](#-about)
+- [Documentation française](#-à-propos)
+
 ## English (Anglais)
 
 ### 📖 About
@@ -27,32 +30,29 @@ The architecture is designed for performance and scalability:
 
     Database: PostgreSQL
 
-    Cache: Redis (for exercise reads)
-
     ORM: Hibernate ORM with Panache
 
     Containerization: Docker & Docker Compose
 
-### 🗺️ Roadmap (Goal: 3 Months)
+### 🗺️ Roadmap
 
-We aim for a Stable v1.0.0 release in 3 months. Here is the battle plan:
-#### 📅 Month 1: Foundations & Data (Current)
+#### 📅 Step 1: Foundations & Data (Current)
 
-    [ ] Initialization of Quarkus project & Docker Compose.
+    [X] Initialization of Quarkus project & Docker Compose.
 
-    [ ] Data Model Design.
+    [X] Data Model Design.
 
-    [ ] Development of basic CRUD endpoints (Public Read-only, Admin Write).
+    [X] Development of basic CRUD endpoints (Public Read-only, Admin Write).
 
-    [ ] Data Seeding: Continuous integration of exercises.
+    [X] Data Seeding: Continuous integration of exercises.
 
-#### 📅 Month 2: Business Logic & Search
+#### 📅 Step 2: Business Logic & Search
 
     [ ] Implementation of advanced search (Fuzzy search, filters by muscles/equipment).
 
     [ ] Media management: Storing links to demo images/videos.
 
-#### 📅 Month 3: Performance & Internationalization
+#### 📅 Step 3: Performance & Internationalization
 
     [ ] Internationalization (i18n): Translating the database into English.
 
@@ -62,7 +62,7 @@ We aim for a Stable v1.0.0 release in 3 months. Here is the battle plan:
 
     [ ] Deployment of v1.0.0 and official opening to external contributions.
 
-#### 📅 Month 4-5: API Showcase Website Setup
+#### 📅 Step 4: API Showcase Website Setup
 
     [ ] Landing page showcasing the application's various features.
 
@@ -97,32 +97,29 @@ L'architecture est pensée pour la performance et la scalabilité :
 
     Base de données : PostgreSQL
 
-    Cache : Redis (pour les lectures d'exercices)
-
-    ORM : Hibernate ORM with Panache
+    ORM : Hibernate ORM avec Panache
 
     Conteneurisation : Docker & Docker Compose
 
-### 🗺️ Roadmap (Objectif : 3 Mois)
+### 🗺️ Roadmap
 
-Nous visons une version v1.0.0 Stable dans 3 mois. Voici le plan de bataille :
-#### 📅 Mois 1 : Fondations & Données (Current)
+#### 📅 Etape 1 : Fondations & Données
 
-    [ ] Initialisation du projet Quarkus & Docker Compose.
+    [X] Initialisation du projet Quarkus & Docker Compose.
 
-    [ ] Conception du modèle de données (MCD).
+    [X] Conception du modèle de données (MCD).
 
-    [ ] Développement des endpoints CRUD de base (Lecture seule publique, Écriture admin).
+    [X] Développement des endpoints CRUD de base (Lecture seule publique, Écriture admin).
 
-    [ ] Data Seeding : Intégration des exercices au fur et à mesure.
+    [X] Data Seeding : Intégration des exercices au fur et à mesure.
 
-#### 📅 Mois 2 : Logique Métier & Recherche
+#### 📅 Etape 2 : Logique Métier & Recherche
 
     [ ] Implémentation de la recherche avancée (Fuzzy search, filtres par muscles/équipement).
 
     [ ] Gestion des médias : Stockage des liens vers images/vidéos de démonstration.
 
-#### 📅 Mois 3 : Performance & Internationalisation
+#### 📅 Etape 3 : Performance & Internationalisation
 
     [ ] Internationalisation (i18n) : Traduction de la base de données en anglais.
 
@@ -132,7 +129,7 @@ Nous visons une version v1.0.0 Stable dans 3 mois. Voici le plan de bataille :
 
     [ ] Déploiement de la v1.0.0 et ouverture officielle aux contributions externes.
 
-#### 📅 Mois 4-5 : Mise en place du site vitrine de l'API
+#### 📅 Etape 4 : Mise en place du site vitrine de l'API
 
     [ ] Page vitrine présentant les différentes fonctionnalités de l'application
 
