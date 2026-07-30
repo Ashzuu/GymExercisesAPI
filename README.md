@@ -38,37 +38,37 @@ The architecture is designed for performance and scalability:
 
 #### 📅 Step 1: Foundations & Data (Current)
 
-    [X] Initialization of Quarkus project & Docker Compose.
+- [X] Initialization of Quarkus project & Docker Compose.
 
-    [X] Data Model Design.
+- [X] Data Model Design.
 
-    [X] Development of basic CRUD endpoints (Public Read-only, Admin Write).
+- [X] Development of basic CRUD endpoints (Public Read-only, Admin Write).
 
-    [X] Data Seeding: Continuous integration of exercises.
+- [X] Data Seeding: Continuous integration of exercises.
 
 #### 📅 Step 2: Business Logic & Search
 
-    [ ] Implementation of advanced search (Fuzzy search, filters by muscles/equipment).
+- [ ] Implementation of advanced search (Fuzzy search, filters by muscles/equipment).
 
-    [ ] Media management: Storing links to demo images/videos.
+- [ ] Media management: Storing links to demo images/videos.
 
 #### 📅 Step 3: Performance & Internationalization
 
-    [ ] Internationalization (i18n): Translating the database into English.
+- [ ] Internationalization (i18n): Translating the database into English.
+ 
+- [ ] Caching: Redis implementation to cache frequent requests (GET /exercises).
 
-    [ ] Caching: Redis implementation to cache frequent requests (GET /exercises).
+- [ ] API Documentation.
 
-    [ ] API Documentation.
-
-    [ ] Deployment of v1.0.0 and official opening to external contributions.
+- [ ] Deployment of v1.0.0 and official opening to external contributions.
 
 #### 📅 Step 4: API Showcase Website Setup
 
-    [ ] Landing page showcasing the application's various features.
+- [ ] Landing page showcasing the application's various features.
 
-    [ ] Ability to generate 3 API keys per account (with a high rate-limit to avoid bandwidth overload).
+- [ ] Ability to generate 3 API keys per account (with a high rate-limit to avoid bandwidth overload).
 
-    If the project gains traction and there is significant interest in the API's development, I will share progress updates via a dedicated communication channel (likely Discord).
+If the project gains traction and there is significant interest in the API's development, I will share progress updates via a dedicated communication channel (likely Discord).
 
 ## Français (French)
 
@@ -105,34 +105,33 @@ L'architecture est pensée pour la performance et la scalabilité :
 
 #### 📅 Etape 1 : Fondations & Données
 
-    [X] Initialisation du projet Quarkus & Docker Compose.
+- [x] Initialisation du projet Quarkus & Docker Compose.
 
-    [X] Conception du modèle de données (MCD).
+- [X] Conception du modèle de données (MCD).
 
-    [X] Développement des endpoints CRUD de base (Lecture seule publique, Écriture admin).
+- [X] Développement des endpoints CRUD de base (Lecture seule publique, Écriture admin).
 
-    [X] Data Seeding : Intégration des exercices au fur et à mesure.
+- [X] Data Seeding : Intégration des exercices au fur et à mesure.
 
 #### 📅 Etape 2 : Logique Métier & Recherche
 
-    [ ] Implémentation de la recherche avancée (Fuzzy search, filtres par muscles/équipement).
+- [ ] Implémentation de la recherche avancée (Fuzzy search, filtres par muscles/équipement).
 
-    [ ] Gestion des médias : Stockage des liens vers images/vidéos de démonstration.
+- [ ] Gestion des médias : Stockage des liens vers images/vidéos de démonstration.
 
 #### 📅 Etape 3 : Performance & Internationalisation
 
-    [ ] Internationalisation (i18n) : Traduction de la base de données en anglais.
+- [ ] Internationalisation (i18n) : Traduction de la base de données en anglais.
 
-    [ ] Caching : Implémentation de Redis pour mettre en cache les requêtes fréquentes (GET /exercises).
+- [ ] Caching : Implémentation de Redis pour mettre en cache les requêtes fréquentes (GET /exercises).
 
-    [ ] Documentation API
+- [ ] Documentation API
 
-    [ ] Déploiement de la v1.0.0 et ouverture officielle aux contributions externes.
+- [ ] Déploiement de la v1.0.0 et ouverture officielle aux contributions externes.
 
 #### 📅 Etape 4 : Mise en place du site vitrine de l'API
 
-    [ ] Page vitrine présentant les différentes fonctionnalités de l'application
-
-    [ ] Possibilité de générer 3 clés API par compte (avec rate-limit haut pour ne pas surcharger la bande passante)
+- [ ] Page vitrine présentant les différentes fonctionnalités de l'application
+- [ ] Possibilité de générer 3 clés API par compte (avec rate-limit haut pour ne pas surcharger la bande passante)
 
 Si le projet prend une place importante, et que vous portez un grand intérêt au développement de l'API, je fournirai dans un canal de communication dédié (sans doute Discord) les avancés de celui-ci.
