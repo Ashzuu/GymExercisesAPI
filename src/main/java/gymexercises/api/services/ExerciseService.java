@@ -1,9 +1,13 @@
 package gymexercises.api.services;
 
+import gymexercises.api.dtos.ExerciseDTO;
 import gymexercises.api.repositories.ExerciseRepository;
 import gymexercises.api.models.Exercise;
+import gymexercises.api.services.mappers.ExerciseMapper;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+
+import java.util.List;
 
 /**
  * Service class for handling Exercise-related business logic.
@@ -25,8 +29,8 @@ public class ExerciseService {
      * Get all exercises from the database.
      * @return Array of all Exercise objects.
      */
-    public Exercise[] getAll(){
-        return this.repo.findAll().list().toArray(new Exercise[0]);
+    public List<ExerciseDTO> getAll(){
+        return ExerciseMapper.toDto(this.repo.findAll().stream().toList());
     }
 
     /**
@@ -34,7 +38,7 @@ public class ExerciseService {
      * @param muscularGroup The muscular group to filter exercises by.
      * @return Array of Exercise objects matching the muscular group.
      */
-    public Exercise[] getByMuscularGroup(String muscularGroup){
-        return this.repo.getByMuscularGroup(muscularGroup).toArray(new Exercise[0]);
+    public List<ExerciseDTO> getByMuscularGroup(String muscularGroup){
+        return ExerciseMapper.toDto(this.repo.getByMuscularGroup(muscularGroup).stream().toList());
     }
 }

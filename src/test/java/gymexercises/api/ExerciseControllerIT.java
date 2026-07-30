@@ -3,6 +3,6 @@ package gymexercises.api;
 import io.quarkus.test.junit.QuarkusIntegrationTest;
 
 @QuarkusIntegrationTest
-class ExerciseResourceIT extends ExerciseResourceTest {
+class ExerciseControllerIT extends ExerciseControllerTest {
     // Execute the same tests but in packaged mode.
 }

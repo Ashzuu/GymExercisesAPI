@@ -9,14 +9,17 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Equipment {
-    @Column(name = "description", length = Integer.MAX_VALUE)
-    private String description;
-    @Column(name = "name_en", length = 100)
-    private String nameEn;
-    @Column(name = "name_fr", length = 100)
-    private String nameFr;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
+
+    @Column(name = "description", length = Integer.MAX_VALUE)
+    private String description;
+
+    @Column(name = "name_en", length = 100)
+    private String nameEn;
+
+    @Column(name = "name_fr", length = 100)
+    private String nameFr;
 }

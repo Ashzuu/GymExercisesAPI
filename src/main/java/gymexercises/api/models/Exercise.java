@@ -5,7 +5,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -35,5 +37,5 @@ public class Exercise extends PanacheEntityBase {
             joinColumns = @JoinColumn(name="id_exercise", table = "exercises"),
             inverseJoinColumns = @JoinColumn(name = "id_muscle", table = "muscles")
     )
-    public Set<Muscle> muscles = new HashSet<>();
+    public List<Muscle> muscles = new ArrayList<>();
 }

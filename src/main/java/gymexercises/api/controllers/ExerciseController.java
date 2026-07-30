@@ -1,6 +1,6 @@
-package gymexercises.api.resources;
+package gymexercises.api.controllers;
 
-import gymexercises.api.models.Exercise;
+import gymexercises.api.dtos.ExerciseDTO;
 import gymexercises.api.services.ExerciseService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
@@ -8,19 +8,21 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 
+import java.util.List;
+
 /**
  * Resource class for handling Exercise-related API endpoints.
  */
 @Path("/exercises")
-public class ExerciseResource {
+public class ExerciseController {
     private final ExerciseService service;
 
     /**
-     * Constructor for ExerciseResource, injecting the ExerciseService.
+     * Constructor for ExerciseController, injecting the ExerciseService.
      * @param service The ExerciseService to be used by this resource.
      */
     @Inject
-    public ExerciseResource(ExerciseService service) {
+    public ExerciseController(ExerciseService service) {
         this.service = service;
     }
 
@@ -31,7 +33,7 @@ public class ExerciseResource {
     @Path("/all")
     @GET
     @Produces("application/json")
-    public Exercise[] getAll(){
+    public List<ExerciseDTO> getAll(){
         return this.service.getAll();
     }
 
@@ -43,7 +45,7 @@ public class ExerciseResource {
     @Path("/getBy/muscularGroup/{muscular_group}")
     @GET
     @Produces("application/json")
-    public Exercise[] getByMuscularGroup(@PathParam("muscular_group") String muscular_group){
+    public List<ExerciseDTO> getByMuscularGroup(@PathParam("muscular_group") String muscular_group){
         return this.service.getByMuscularGroup(muscular_group);
     }
 }

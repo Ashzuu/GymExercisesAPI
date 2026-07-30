@@ -6,7 +6,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -29,6 +31,6 @@ public class MuscularGroup extends PanacheEntityBase {
     private String media;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "muscularGroup")
-    private Set<Muscle> muscles = new LinkedHashSet<>();
+    @OneToMany(mappedBy = "muscularGroup", fetch = FetchType.LAZY)
+    private List<Muscle> muscles = new ArrayList<>();
 }
