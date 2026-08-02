@@ -1,9 +1,9 @@
 package gymexercises.api.controllers;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import gymexercises.api.dtos.MuscleDTO;
-import gymexercises.api.dtos.MuscularGroupDTO;
-import gymexercises.api.dtos.filters.MuscularFilter;
+import dtos.MuscleDTO;
+import dtos.MuscularGroupDTO;
+import dtos.filters.MuscularFilter;
 import gymexercises.api.services.MuscleService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
@@ -37,7 +37,7 @@ public class MuscleController {
         return this.service.getAll();
     }
 
-    @Path("groups/all")
+    @Path("/groups/all")
     @GET
     @Produces("application/json")
     @JsonView(MuscularFilter.IncludeMuscles.class)

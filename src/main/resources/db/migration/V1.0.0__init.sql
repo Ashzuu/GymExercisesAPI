@@ -1,5 +1,3 @@
-DROP SCHEMA IF EXISTS data CASCADE;
-
 CREATE SCHEMA IF NOT EXISTS data;
 SET search_path = "data";
 

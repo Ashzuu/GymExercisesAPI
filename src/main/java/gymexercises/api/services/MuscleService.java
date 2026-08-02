@@ -1,11 +1,12 @@
 package gymexercises.api.services;
 
-import gymexercises.api.dtos.MuscleDTO;
-import gymexercises.api.dtos.MuscularGroupDTO;
+import dtos.MuscleDTO;
+import dtos.MuscularGroupDTO;
 import gymexercises.api.repositories.MuscleRepository;
 import gymexercises.api.repositories.MuscularGroupRepository;
 import gymexercises.api.services.mappers.MuscleMapper;
 import gymexercises.api.services.mappers.MuscularGroupMapper;
+import io.quarkus.cache.CacheResult;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
@@ -33,6 +34,7 @@ public class MuscleService {
      * Get all muscles in the database
      * @return All muscles in the database
      */
+    @CacheResult(cacheName = "muscles-cache")
     public List<MuscleDTO> getAll(){
         return MuscleMapper.toDto(this.muscleRepo.findAll().list());
     }
@@ -41,6 +43,7 @@ public class MuscleService {
      * Get all muscular group in the database
      * @return All Muscular groups in the database
      */
+    @CacheResult(cacheName = "muscular-groups-cache")
     public List<MuscularGroupDTO> getAllMuscularGroups(){
         return MuscularGroupMapper.toDto(this.muscularGroupRepo.findAll().list());
     }

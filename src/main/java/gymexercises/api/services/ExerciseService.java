@@ -1,9 +1,9 @@
 package gymexercises.api.services;
 
-import gymexercises.api.dtos.ExerciseDTO;
+import dtos.ExerciseDTO;
 import gymexercises.api.repositories.ExerciseRepository;
-import gymexercises.api.models.Exercise;
 import gymexercises.api.services.mappers.ExerciseMapper;
+import io.quarkus.cache.CacheResult;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
@@ -29,6 +29,7 @@ public class ExerciseService {
      * Get all exercises from the database.
      * @return Array of all Exercise objects.
      */
+    @CacheResult(cacheName = "exercises-cache")
     public List<ExerciseDTO> getAll(){
         return ExerciseMapper.toDto(this.repo.findAll().stream().toList());
     }

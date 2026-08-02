@@ -1,6 +1,6 @@
 package gymexercises.api.controllers;
 
-import gymexercises.api.dtos.ExerciseDTO;
+import dtos.ExerciseDTO;
 import gymexercises.api.services.ExerciseService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;

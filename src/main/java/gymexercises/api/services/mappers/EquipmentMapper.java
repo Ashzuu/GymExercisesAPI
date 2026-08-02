@@ -1,6 +1,6 @@
 package gymexercises.api.services.mappers;
 
-import gymexercises.api.dtos.EquipmentDTO;
+import dtos.EquipmentDTO;
 import gymexercises.api.models.Equipment;
 
 public class EquipmentMapper {
