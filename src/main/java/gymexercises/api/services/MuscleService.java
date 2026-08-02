@@ -1,7 +1,7 @@
 package gymexercises.api.services;
 
-import dtos.MuscleDTO;
-import dtos.MuscularGroupDTO;
+import dtos.gym_api_data.MuscleDTO;
+import dtos.gym_api_data.MuscularGroupDTO;
 import gymexercises.api.repositories.MuscleRepository;
 import gymexercises.api.repositories.MuscularGroupRepository;
 import gymexercises.api.services.mappers.MuscleMapper;

@@ -1,7 +1,7 @@
 package gymexercises.api.services.mappers;
 
-import dtos.MuscleDTO;
-import dtos.MuscularGroupDTO;
+import dtos.gym_api_data.MuscleDTO;
+import dtos.gym_api_data.MuscularGroupDTO;
 import gymexercises.api.models.MuscularGroup;
 
 import java.util.List;

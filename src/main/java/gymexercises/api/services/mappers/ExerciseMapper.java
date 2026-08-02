@@ -1,6 +1,6 @@
 package gymexercises.api.services.mappers;
 
-import dtos.ExerciseDTO;
+import dtos.gym_api_data.ExerciseDTO;
 import gymexercises.api.models.Exercise;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 package gymexercises.api.services;
 
-import dtos.ExerciseDTO;
+import dtos.gym_api_data.ExerciseDTO;
 import gymexercises.api.repositories.ExerciseRepository;
 import gymexercises.api.services.mappers.ExerciseMapper;
 import io.quarkus.cache.CacheResult;

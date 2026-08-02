@@ -1,4 +1,4 @@
-name: security.yml
+name: Vérification de sécurité
 on:
   push:
     branches:

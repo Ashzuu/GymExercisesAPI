@@ -1,9 +1,9 @@
 package gymexercises.api.controllers;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import dtos.MuscleDTO;
-import dtos.MuscularGroupDTO;
-import dtos.filters.MuscularFilter;
+import dtos.gym_api_data.MuscleDTO;
+import dtos.gym_api_data.MuscularGroupDTO;
+import dtos.gym_api_data.filters.MuscularFilter;
 import gymexercises.api.services.MuscleService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
